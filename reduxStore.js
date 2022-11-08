@@ -1,4 +1,4 @@
-const { reducer, orderCake, restoreCake } = require('./index');
+const { reducer, orderCake, restoreCake, orderIceCream, restoreIceCream } = require('./multipleStateProps_singleReducer');
 const redux = require('redux');
 const createStore = redux.createStore;
 const bindActionCreaters = redux.bindActionCreators;
@@ -16,6 +16,11 @@ store.dispatch(orderCake());
 store.dispatch(orderCake());
 store.dispatch(orderCake());
 store.dispatch(restoreCake());
+
+store.dispatch(orderIceCream());
+store.dispatch(orderIceCream());
+store.dispatch(orderIceCream());
+store.dispatch(restoreIceCream())
 
 // alternate using bindActionCreaters
 // const actions = bindActionCreaters({ orderCake, restoreCake }, store.dispatch);
